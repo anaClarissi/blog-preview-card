@@ -3,15 +3,120 @@
     src: url('../fonts/Figtree-VariableFont_wght.ttf') format('truetype');
 }
 
-:root {
-    --color-primary: #F4D04E;
+@font-face {
+    font-family: 'Figtree';
+    src: url('../fonts/Figtree-Italic-VariableFont_wght.ttf');
+    font-style: italic;
+}
 
-    --font-primary: 'Figtree', sans-serif;
+:root {
+    --color-primary-01: #F4D04E;
+    --color-primary-02: #6B6B6B;
+    --background-color: #F4D04E;
+
+    --card-color: #ffffff;
+    --card-border-color: #000000;
+    --text-color: #6B6B6B;
+
+    --font-primary-01: 'Figtree', sans-serif;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: var(--font-primary);
+    font-family: var(--font-primary-01);
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+    background-color: var(--background-color);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+    width: 384px;
+    height: 522px;
+    background-color: var(--card-color);
+    border: solid 1px var(--card-border-color);
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: 9px 9px black;
+    transition: all .8s ease;
+}
+
+.card:hover {
+    box-shadow: 20px 20px black;
+}
+
+.blog-content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 336px;
+    height: 194px;
+}
+
+#blog-img {
+    width: 336px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.learning {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    width: 82px;
+    height: 30px;
+    background-color: var(--color-primary-01);
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+.blog-title {
+    font-size: 26px;
+    font-weight: bolder;
+}
+
+.blog-description {
+    color: var(--color-primary-02);
+    line-height: 25px;
+}
+
+.avatar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.avatar-img {
+    width: 30px;
+    border-radius: 50%;
+}
+
+.avatar-fig {
+    font-weight: bold;
+    font-size: 16px;
 }
